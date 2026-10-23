@@ -1,0 +1,17 @@
+{
+  "name": "todo-crud-monorepo",
+  "version": "1.0.0",
+  "description": "Full-stack TODO CRUD application with React, Express, and MongoDB",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "backend": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build:frontend": "npm run build --prefix frontend",
+    "test:backend": "npm test --prefix backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
