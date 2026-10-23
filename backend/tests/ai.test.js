@@ -82,6 +82,7 @@ const runAiTests = async () => {
 
     // 4. Natural language task completion
     console.log('\n[Test 4] AI Task Completion via Natural Language');
+    console.log("Test done")
     const completePrompt = `Mark task named ${uniqueTitle} as done`;
     const completeRes = await fetch(`${BASE_URL}/ai/chat`, {
       method: 'POST',
